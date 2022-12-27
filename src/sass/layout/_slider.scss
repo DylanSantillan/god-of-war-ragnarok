@@ -1,0 +1,36 @@
+.conteiner-slider{
+    margin-top: 15rem;
+    padding: 0 2rem;
+    
+    &__title{
+        margin-top: 5rem;
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+.slider{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+
+}
+
+.conteiner-img{
+
+    background-color: var(--c-gris);
+    max-width: 15rem;
+    max-height: 10rem;
+    display: flex;
+    align-items: center;
+
+    &__hero{
+        padding: 1rem;
+    }
+
+    &__hero--mimir{
+        width: 35%;
+    }
+}

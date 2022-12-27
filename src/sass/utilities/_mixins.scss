@@ -1,0 +1,25 @@
+@mixin flex( $dir , $wrap , $just , $align ){
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $just;
+    align-items: $align;
+};
+
+@mixin media( $medida : 650px ){
+    @media screen and (max-width:$medida){
+        @content
+    }
+};
+
+@mixin btn( $bg, $bg-h){
+    background-color: $bg;
+    font-size: 0.9em;
+    padding: .6rem 1rem;
+    border-radius: .3rem;
+    border: 2px solid var(--c-azul);
+    transition: all .4s ease-in-out;
+
+    &:hover{
+        background-color: $bg-h;
+    }
+};

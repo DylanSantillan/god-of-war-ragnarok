@@ -1,0 +1,92 @@
+@use '../utilities/variables';
+@use '../utilities/mixins' as m;
+
+.main{
+    position: relative;
+    
+    &__video--lg{
+        height: 80vh;
+        
+        @include m.media(1090px){
+            display: none;
+        }
+    }
+    
+    &__video--md{
+        height: 80vh;
+        display: none;
+
+        @include m.media(1090px){
+            display: inline;
+        }
+    }
+}
+
+.wrapper-shadow{
+    background: rgb(22,22,26);
+    background: linear-gradient(90deg, rgba(22,22,26,0.9753035003063726) 0%, rgba(22,22,26,0) 100%);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80vh;
+    @include m.media(1090px){
+        background: linear-gradient(0deg, rgba(22,22,26,1) 0%, rgba(22,22,26,1) 30%, rgba(22,22,26,0) 100%);
+    }
+}
+
+.wrapper-presentation{
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    top: 0;
+    padding: 0 2rem;
+    @include m.media(1090px){
+        top:35vh;
+    }
+
+}
+
+.presentation{
+    width: 50%;
+    height: 100%;
+    @include m.flex( column , nowrap , center , center );
+    
+    @include m.media(1090px){
+        width: 100%;
+    }
+    
+    &__logo{
+        margin-bottom: 3rem;
+    }
+    
+    &__paragraph{
+        font-size: 1.2em;
+        line-height: 1.7rem;
+        font-family: var(--tipo-secundaria);
+    }
+
+    @include m.media(1090px){
+        text-align: center;
+    }
+}
+
+.buttons{
+    margin-top: 3rem;
+    width: 100%;
+    @include m.flex( row , nowrap ,flex-start , center );
+    gap: 1rem;
+    
+    @include m.media(1090px){
+        @include m.flex( row , nowrap ,center , center );
+    }
+
+    &__presentation{
+        @include m.btn( var(--c-azul), transparent);
+    }
+
+    &__presentation--mas{
+        @include m.btn( transparent, var(--c-azul));
+    }
+}
+
+

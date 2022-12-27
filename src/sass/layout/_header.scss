@@ -1,0 +1,61 @@
+@use '../utilities/variables';
+@use '../utilities/mixins' as m;
+
+.header{
+    box-shadow: 3px 3px 6px var(--c-gris-oscuro);
+    position: relative;
+    z-index: 10;
+    background-color: var(--c-gris-oscuro);
+    width: 100vw;
+    height: 4.7rem;
+    font-size: 0.9em;
+    padding: 0 2rem;
+    @include m.flex( row , nowrap , space-between , center );
+    
+    &__menu{
+        display: none;
+        width: 2em;
+
+        @include m.media(){
+            display: inline;
+        }
+    }
+    
+    &__logo{
+        width: 3.5em;
+        @include m.media(){
+            position: absolute;
+            left: calc(50vw - 1.75em);
+        }
+        @include m.media(360px){
+            display: none;
+        }
+    }
+
+    &__btn-compra{
+        @include m.btn( var(--c-azul), transparent);
+    }
+}
+
+ul{
+    display: flex;
+    gap: 1rem;
+    
+    @include m.media(){
+        display: none;
+    }
+
+    &__li{
+        @include m.flex( row , nowrap , center , center );
+        transition: all .4s ease-in-out;
+    
+        &:hover{
+            background-color: var(--c-azul);
+            padding: .9rem 1.2rem;
+            border-radius: 3rem;
+        }
+        
+    }
+}
+    
+
