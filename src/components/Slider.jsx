@@ -1,12 +1,13 @@
 import React from 'react'
 import separador from '../assets/separador.svg'
-import sliderAtreus from '../assets/slider-atreus.jpg'
-import sliderBrokSindri from '../assets/slider-brok-sindri.jpg'
-import sliderFreya from '../assets/slider-freya.jpg'
-import sliderKratos from '../assets/slider-kratos.jpg'
-import sliderMimir from '../assets/slider-mimir.jpg'
-import sliderThor from '../assets/slider-thor.jpg'
-import sliderTyr from '../assets/slider-tyr.jpg'
+import sliderAtreus from '../assets/slider-atreus.png'
+import sliderBrokSindri from '../assets/slider-brok-sindri.png'
+import sliderAngrboda from '../assets/slider-angrboda.png'
+import sliderFreya from '../assets/slider-freya.png'
+import sliderKratos from '../assets/slider-kratos.png'
+import sliderMimir from '../assets/slider-mimir.png'
+import sliderThor from '../assets/slider-thor.png'
+import sliderTyr from '../assets/slider-tyr.png'
 
 const Slider = () => {
   return (
@@ -34,6 +35,9 @@ const Slider = () => {
             </div>
             <div className='conteiner-img'>
               <img className='conteiner-img__hero--tyr' src={sliderTyr} alt="Tyr" />  
+            </div>
+            <div className='conteiner-img'>
+              <img className='conteiner-img__hero--angrboda' src={sliderAngrboda} alt="Angrboda" />  
             </div>
         </div>
     </section>
